@@ -1,0 +1,42 @@
+﻿<Window x:Class="emgucv_example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:emgucv_example"
+        xmlns:WinFormControls="clr-namespace:Emgu.CV.UI;assembly=Emgu.CV.UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grid1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <WindowsFormsHost Grid.Column="1" Name="windowsFormsHost1"  >
+            <WinFormControls:ImageBox x:Name="ibox" MouseDown="Ibox_MouseDown"  BorderStyle="FixedSingle" MouseWheel="OnMouseWheel" MouseEnter="Ibox_MouseEnter" MouseMove="Ibox_MouseMove" MouseLeave="Ibox_MouseLeave" MouseUp="Ibox_MouseUp"/>
+        </WindowsFormsHost>
+
+        <!--<ScrollBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="hor" />
+            <ScrollBar Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="ver" />-->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <TextBox  x:Name="zoomsize" Grid.Row="0"/>
+            <Button x:Name="setzoom"  Content="zoom" Click="Setzoom_Click" Grid.Row="1"/>
+            <Button x:Name="refresh" Content="refresh" Click="Refresh_Click" Grid.Row="2"/>
+            <StackPanel Grid.Row="3">
+                <RadioButton x:Name="drawline"  Content="line"/>
+                <RadioButton x:Name="drawrec" Content="rec"/>
+                <RadioButton x:Name="drawpoly" Content="poly"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
