@@ -32,9 +32,9 @@
             <Button x:Name="setzoom"  Content="zoom" Click="Setzoom_Click" Grid.Row="1"/>
             <Button x:Name="refresh" Content="refresh" Click="Refresh_Click" Grid.Row="2"/>
             <StackPanel Grid.Row="3">
-                <RadioButton x:Name="drawline"  Content="line"/>
-                <RadioButton x:Name="drawrec" Content="rec"/>
-                <RadioButton x:Name="drawpoly" Content="poly"/>
+                <RadioButton x:Name="RB_DrawLine"  Content="line"/>
+                <RadioButton x:Name="RB_DrawRec" Content="rec"/>
+                <RadioButton x:Name="RB_DrawPoly" Content="poly"/>
             </StackPanel>
         </Grid>
 
